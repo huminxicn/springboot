@@ -20,7 +20,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserById(Integer id) {
-        List<User> select = userMapper.select(id);
+        User user = new User();
+        user.setId(id);
+        List<User> select = userMapper.select(user);
         return select.get(0);
     }
 }

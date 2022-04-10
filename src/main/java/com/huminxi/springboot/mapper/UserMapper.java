@@ -12,6 +12,4 @@ import java.util.List;
  */
 public interface UserMapper {
     List<User> select(User user);
-
-    List<User> select(Integer id);
 }
