@@ -21,7 +21,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserById(Integer id) {
         User user = new User();
-        user.setId(id);
+        if (id != null) {
+            user.setId(id);
+        }
+        user.setName("hufei");
         List<User> select = userMapper.select(user);
         return select.get(0);
     }
