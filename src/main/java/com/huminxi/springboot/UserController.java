@@ -23,4 +23,9 @@ public class UserController {
         return userService.getUserById(id);
     }
 
+    @GetMapping("/hello")
+    public String getUser() {
+        return "hello docker";
+    }
+
 }
